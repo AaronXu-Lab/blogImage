@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 960" role="img" aria-labelledby="title desc"><title id="title">Design Release · 六阶段</title><desc id="desc">仅在 DM 对齐正式契约，保护现有设计。conflictResolution 目录跳过本地环境检查。DS 模式分流见子流程；无变化可结束，QA 漂移返回契约适配，不通知。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#52606d"/></marker></defs>
+<style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;text-anchor:middle;fill:#263846}.label{font-size:18px;font-weight:600}.note{font-size:14px}.subflow{fill:#1766a0;text-decoration:underline}.edge{fill:none;stroke:#52606d;stroke-width:2.5;marker-end:url(#arrow)}</style>
+<rect width="1200" height="960" fill="#f7f9fb"/><text x="600" y="48" font-size="30" font-weight="700">Design Release · 六阶段</text>
+<path class="edge" d="M600 176V220"/>
+<path class="edge" d="M600 296V340"/>
+<path class="edge" d="M600 416V460"/>
+<path class="edge" d="M600 536V580"/>
+<path class="edge" d="M600 656V700"/>
+<path class="edge" d="M600 776V835"/>
+<rect x="360" y="100" width="480" height="76" rx="14" fill="#ffffff" stroke="#9eacb8" stroke-width="2"/>
+<text class="label" x="600.0" y="133">Step 0 · 配置与环境确认</text>
+<text class="note" x="600.0" y="157">选择模式、检查入口、开始独立任务</text>
+<rect x="360" y="220" width="480" height="76" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/>
+<text class="label" x="600.0" y="253">Step 1 · 发布范围检查</text>
+<text class="note" x="600.0" y="277">范围锁定；仅检查非豁免工程服务</text>
+<path class="edge" d="M840 258H875V450H600V460"/><text class="note" x="1000" y="355">syncDesignSystem=false</text><text class="note" x="1000" y="380">跳过 Step 2</text>
+<rect x="360" y="340" width="480" height="76" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/>
+<text class="label" x="600.0" y="373">Step 2 · DS 制品对齐</text>
+<a href="workflow.ds.svg" aria-label="查看 DS 制品对齐子流程 workflow.ds.svg"><text class="note subflow" x="600.0" y="397">启用时执行 · 查看 workflow.ds.svg ↗</text></a>
+<rect x="360" y="460" width="480" height="76" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/>
+<text class="label" x="600.0" y="493">Step 3 · QA 同步与契约适配</text>
+<text class="note" x="600.0" y="517">保留 DM；目录冲突按本地 / 远端策略处理</text>
+<rect x="360" y="580" width="480" height="76" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/>
+<text class="label" x="600.0" y="613">Step 4 · 验证</text>
+<text class="note" x="600.0" y="637">制品、契约、设计保护与实际场景</text>
+<rect x="360" y="700" width="480" height="76" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/>
+<text class="label" x="600.0" y="733">Step 5 · 提交与交付</text>
+<a href="workflow.delivery.svg" aria-label="查看提交与交付子流程 workflow.delivery.svg"><text class="note subflow" x="600.0" y="757">候选验证与 push · 查看 workflow.delivery.svg ↗</text></a>
+<rect x="360" y="835" width="480" height="76" rx="14" fill="#edf9f1" stroke="#2e8b54" stroke-width="2"/>
+<text class="label" x="600.0" y="868">完成 · 交付证明与重启核验</text>
+<text class="note" x="600.0" y="892">真实 commit / DS 结果；不创建 PR、不通知</text>
+<rect x="40" y="220" width="290" height="76" rx="14" fill="#edf9f1" stroke="#2e8b54" stroke-width="2"/>
+<text class="label" x="185.0" y="253">无变化完成</text>
+<text class="note" x="185.0" y="277">本次核对完成，不制造空提交</text>
+<path class="edge" d="M360 618H55V318H185V296"/>
+<text class="note" x="185" y="550">无候选且 DS 未发版</text>
+<path class="edge" d="M840 138H900"/>
+<rect x="900" y="100" width="270" height="76" rx="14" fill="#fff0ef" stroke="#c94b43" stroke-width="2"/>
+<text class="label" x="1035.0" y="133">入口缺失：停止</text>
+<text class="note" x="1035.0" y="157">报告缺口，不自动初始化</text>
+<path class="edge" d="M840 738H900V498H840"/>
+<text class="note" x="990" y="650">QA 漂移</text>
+<text class="note" x="990" y="674">重新适配、按需重验</text>
+<text class="note" x="600" y="938">必要检查失败：保留现场与恢复点；已发布制品不回滚</text>
+</svg>

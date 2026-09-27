@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1530" role="img" aria-labelledby="title desc"><title id="title">Fresh Design · 七阶段</title><desc id="desc">阶段、运行中任务判断、恢复和累计交付结果；完整规则见文本工作流。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#52606d"/></marker></defs><style>text{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;text-anchor:middle;fill:#263846}.label{font-size:18px;font-weight:600}.note{font-size:14px}.edge{fill:none;stroke:#52606d;stroke-width:2.5;marker-end:url(#arrow)}.link{fill:#1766a0;text-decoration:underline}</style>
+<rect width="1200" height="1530" fill="#f7f9fb"/><text x="600" y="48" font-size="30" font-weight="700">Fresh Design · 七阶段</text>
+<rect x="350" y="86" width="500" height="78" rx="14" fill="#ffffff" stroke="#9eacb8" stroke-width="2"/><text class="label" x="600.0" y="115">显式调用 Fresh Design</text>
+<text class="note" x="600.0" y="142">先选流程；维护 Skill 不执行迁移</text>
+<path class="edge" d="M850 125H900V190"/>
+<rect x="890" y="190" width="290" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="1035.0" y="219">独立 Suggestion</text>
+<a href="workflow.suggestion.svg"><text class="note link" x="1035.0" y="246">workflow.suggestion.svg ↗</text></a>
+<path class="edge" d="M1035 268V310"/>
+<rect x="890" y="310" width="290" height="78" rx="14" fill="#edf9f1" stroke="#2e8b54" stroke-width="2"/><text class="label" x="1035.0" y="339">只读推荐后结束</text>
+<text class="note" x="1035.0" y="366">不进入主流程</text>
+<path class="edge" d="M600 164V210"/>
+<text class="note" x="650" y="193">主流程</text>
+<rect x="350" y="210" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="239">Step 0 · 加载环境</text>
+<text class="note" x="600.0" y="266">独立 FD 配置与项目规范</text>
+<path class="edge" d="M600 288V325"/>
+<path d="M600 325L750 380L600 435L450 380Z" fill="#fff7e6" stroke="#c98312" stroke-width="2"/><text class="label" x="600" y="374">存在运行中 Fresh？</text><text class="note" x="600" y="397">开放旧 PR 本身不算运行中</text>
+<path class="edge" d="M450 380H250V455"/>
+<text class="note" x="330" y="363">是</text>
+<rect x="20" y="455" width="300" height="78" rx="14" fill="#fff0ef" stroke="#c94b43" stroke-width="2"/><text class="label" x="170" y="484">恢复既有 Gate</text>
+<text class="note" x="170" y="511">runner／Review／未知写入</text>
+<path class="edge" d="M600 435V485"/>
+<text class="note" x="650" y="462">否</text>
+<rect x="350" y="485" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="514">Step 1 · 锁定迁移范围</text>
+<text class="note" x="600.0" y="541">会话优先；池追加先询问；无范围等待</text>
+<path class="edge" d="M600 563V600"/>
+<rect x="350" y="600" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="629">Step 2 · 前置 DR 与基线</text>
+<text class="note" x="600.0" y="656">成功证明未变则复用，否则执行 DR</text>
+<path class="edge" d="M600 678V715"/>
+<rect x="350" y="715" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="744">Step 3 · 迁移与阶段决策</text>
+<a href="workflow.migration.svg"><text class="note link" x="600.0" y="771">workflow.migration.svg ↗</text></a>
+<path class="edge" d="M600 793V830"/>
+<rect x="350" y="830" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="859">Step 4 · 验证与用户 Review</text>
+<text class="note" x="600.0" y="886">单项验证豁免不等于 Review 放行</text>
+<path class="edge" d="M600 908V945"/>
+<path d="M600 945L750 1000L600 1055L450 1000Z" fill="#fff7e6" stroke="#c98312" stroke-width="2"/><text class="label" x="600" y="994">Gate 4.2 · Review 通过？</text><text class="note" x="600" y="1017">必经 Gate，等待明确通过</text>
+<path class="edge" d="M450 1000H250V755H350"/>
+<text class="note" x="250" y="908">反馈：修复相关项</text>
+<path class="edge" d="M600 1055V1100"/>
+<text class="note" x="650" y="1080">通过</text>
+<rect x="350" y="1100" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="1129">Step 5 · 累计 PR 交付与通知</text>
+<a href="workflow.delivery.svg"><text class="note link" x="600.0" y="1156">workflow.delivery.svg ↗</text></a>
+<path class="edge" d="M850 1138H945V870H850"/>
+<text class="note" x="1035" y="1000">可见漂移重验</text>
+<path class="edge" d="M600 1178V1220"/>
+<rect x="350" y="1220" width="500" height="78" rx="14" fill="#edf6ff" stroke="#287bbb" stroke-width="2"/><text class="label" x="600.0" y="1249">Step 6 · 临时环境与迁移池收尾</text>
+<text class="note" x="600.0" y="1276">PR 核验后停服务、回收 worktree；不等合入</text>
+<path class="edge" d="M600 1298V1340"/>
+<rect x="350" y="1340" width="500" height="78" rx="14" fill="#edf9f1" stroke="#2e8b54" stroke-width="2"/><text class="label" x="600.0" y="1369">完成 · 唯一主 PR 与可追溯结果</text>
+<text class="note" x="600.0" y="1396">保留远端分支；汇总 PRD 冲突及处理</text>
+<text class="note" x="600" y="1470">等待 Review：保留服务；其他暂停或失败：停止服务并保留恢复证据</text>
+</svg>
